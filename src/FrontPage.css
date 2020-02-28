@@ -10,8 +10,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 2000px;
-    height: 2000px;
 }
 
 #display {
