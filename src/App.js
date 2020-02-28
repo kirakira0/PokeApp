@@ -8,9 +8,9 @@ export default function App() {
   return (
     <div className="App">
       <Header />
+      <Questions />
       <Results />
       <Map />
-      <Questions />
     </div>
   );
 }
