@@ -1,7 +1,8 @@
 import React from "react"
+import "./FrontPage.css";
 
 export default function Header() {
     return (
-        <h1>POKE</h1>
-        )
+        <div id="header-div">POKE</div>
+    )
 }
