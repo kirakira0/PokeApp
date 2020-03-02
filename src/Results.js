@@ -16,7 +16,7 @@ export default function Results() {
     }, []);
 
     return (
-    <Container maxWidth="sm" style={{marginTop: 20}}>
+    <Container maxWidth="lg" style={{marginTop: 20}}>
       <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
         <Typography variant="h3" align="center">The Pokemon best suited to fight your enemy is: 
         {

@@ -6,10 +6,9 @@ import Paper from '@material-ui/core/Paper'
 
 export default function Results() {
 
-
     return (
-        <Container maxWidth="sm" style={{marginTop: 20}}>
-        <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
+        <Container maxWidth="lg" style={{marginTop: 20}}>
+        <Paper style={{padding: 10, backgroundColor: '#fffff3'}}>
             <img src="https://i.ya-webdesign.com/images/pokemon-clip-small-16.png" alt="new"/>
             <Typography variant="h3" align="center">
                 What is your enemy’s defining quality? 
