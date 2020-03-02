@@ -22,8 +22,12 @@ export default function Results() {
         "https://i.ya-webdesign.com/images/pokemon-clip-small-16.png",
         "https://www.altoonalibrary.org/wp-content/uploads/2019/08/pokemon.jpg"
     ]
-    
+
+    const numbers = [1, 2];
+
+
     return (
+        
         <Container maxWidth="lg" style={{marginTop: 20}}>
         <Paper style={{padding: 10, backgroundColor: '#fffff3'}}>
             <img src= {images[0]} alt="new"/>
@@ -32,7 +36,8 @@ export default function Results() {
             </Typography>
             {answers[0].slice(1).map(([x, y]) => <button>{x}</button>)}
         </Paper>
-      </Container>
-    
-    )
+        </Container>  
+        
+    )        
+
 }
