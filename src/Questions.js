@@ -10,16 +10,16 @@ export default function Results() {
     return (
         <Container maxWidth="sm" style={{marginTop: 20}}>
         <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
-          <Typography variant="h3" align="center">The Pokemon best suited to fight your enemy is: 
-          {/* {poke.results &&
-            poke.results.map(result => (
-              <li key={result.name}>
-                <a href={result.url}>
-                  {result.name}
-                </a>
-              </li>
-            ))} */}
-          </Typography>
+            <img src="https://i.ya-webdesign.com/images/pokemon-clip-small-16.png" alt="new"/>
+            <Typography variant="h3" align="center">
+                What is your enemy’s defining quality? 
+            </Typography>
+            <div>
+          <button>Hot-tempered</button>
+        </div>
+        <div>
+          <button>Relaxed</button>
+        </div>
         </Paper>
       </Container>
     
