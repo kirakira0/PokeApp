@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
-import Paper from '@material-ui/core/Paper'
+import "./FrontPage.css";
 
 export default function Results() {
 
@@ -30,25 +28,18 @@ export default function Results() {
     return (
 
         questionsAndAnswers.map(questionAndAnswer => (    
-            <Container maxWidth="lg" style={{marginTop: 20}}>      
-            <Paper style={{padding: 10, backgroundColor: '#fffff3'}}>
-            <Typography variant="h3" align="center">   
-
-            <div key={questionAndAnswer.question}>
-                <img src= {questionAndAnswer.image} alt="new"/>
+            <div id="question-container" key={questionAndAnswer.question}>
+                <img id="question-image-container" src= {questionAndAnswer.image} alt="new"/>
                 <div>{questionAndAnswer.question}</div>
-                <div>
-                    {questionAndAnswer.answers.map(answer => (
-                        <div key={answer[0]}>
-                            {/* {answer[0]}: {answer[1]} */}
-                            <button>{answer[0]}</button>
-                        </div>
-                    ))}
-                </div>
+                    <div>
+                        {questionAndAnswer.answers.map(answer => (
+                            <div id="question-answer-container" key={answer[0]}>
+                                {/* {answer[0]}: {answer[1]} */}
+                                <button>{answer[0]}</button>
+                            </div>
+                        ))}
+                     </div>
             </div>
-            </Typography>
-            </Paper>
-            </Container>
         ))
     )        
 

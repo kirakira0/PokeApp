@@ -1,6 +1,10 @@
 #App {
     font-family: "Press Start 2P", cursive;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -20,7 +24,22 @@ body {
     height: 10vh;
 }
 
+#question-container {
+    height: auto;
+    width: 89vw;
+    background-color: pink;
+    padding: 10px;
+    border-radius: 40px;
+}
 
+#question-image-container {
+    width: 50vw;
+    height: auto;
+    padding: 5px;
+}
 
-
-
+#question-answer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
