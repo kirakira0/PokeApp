@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { GOOGLEAPIKEY } from "./config.js";
+import "./FrontPage.css";
 
 export default function Map({ options, onMount, className, onMountProps }) {
   const ref = useRef();
@@ -21,7 +22,7 @@ export default function Map({ options, onMount, className, onMountProps }) {
 
   return (
     <div
-      style={{ height: `60vh`, margin: `1em 0`, borderRadius: `0.5em` }}
+      style={{ width: `89vw`, height: `40vh`, margin: `1em 0`, borderRadius: `0.5em` }}
       {...{ ref, className }}
     />
   );
@@ -29,7 +30,7 @@ export default function Map({ options, onMount, className, onMountProps }) {
 
 Map.defaultProps = {
   options: {
-    center: { lat: 33.9702, lng: 118.4166 },
-    zoom: 5
+    center: { lat: 33.97, lng: -118.42 },
+    zoom: 13
   }
 };
