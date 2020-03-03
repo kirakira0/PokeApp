@@ -5,7 +5,9 @@ import Map from "./Map";
 import Questions from "./Questions";
 import "./FrontPage"
 
+
 export default function App() {
+
   return (
     <div className="App">
       <Header />
