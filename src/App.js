@@ -3,6 +3,7 @@ import Header from "./Header";
 import Results from "./Results";
 import Map from "./Map";
 import Questions from "./Questions";
+import "./FrontPage"
 
 export default function App() {
   return (
