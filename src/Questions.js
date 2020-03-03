@@ -33,12 +33,12 @@ export default function Questions(props) {
         questionsAndAnswers.map(questionAndAnswer => (    
             <div id="question-container" key={questionAndAnswer.question}>
                 <img id="question-image-container" src= {questionAndAnswer.image} alt="new"/>
-                <div>{questionAndAnswer.question}</div>
-                <div>
+                <div id="question-question-container">{questionAndAnswer.question}</div>
+                <div id="question-answer-container">
                     {questionAndAnswer.answers.map(answer => (
-                        <div id="question-answer-container" key={answer[0]}>
+                        <div key={answer[0]}>
                             {/* {answer[0]}: {answer[1]} */}
-                            <button onClick={() => updateInfo(answer[1])}>{answer[0]}</button>
+                            <button class="button" onClick={() => updateInfo(answer[1])}>{answer[0]}</button>
                         </div>
                     ))}
                 </div>
