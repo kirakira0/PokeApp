@@ -3,13 +3,13 @@ import Header from "./Header";
 import Results from "./Results";
 import Map from "./Map";
 import Questions from "./Questions";
-import "./FrontPage"
+import "./FrontPage.css";
 
 
 export default function App() {
 
   return (
-    <div className="App">
+    <div className="App" id="App">
       <Header />
       <Questions />
       <Results />
