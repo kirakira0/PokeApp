@@ -6,77 +6,50 @@ import Paper from '@material-ui/core/Paper'
 
 export default function Results() {
 
-    //structure of the questions and answers {question: [api-value, [answer1, value], [answer2, value]]}
-    var questions = [
-        "Which character trait best describes your opponent?",
-        "Question 2",
-        "Question 3"
-    ]
-    var answers = [
-        ["type", ["Stubborn and Hot-Headed", "water"], ["Calm and Quiet", "electric"], ["Arrogant and Selfish", "psychic"], ["Friendly and Attention-Seeking", "ground"], ],
-        ["happiness", ["op1", "type1"], ["op2", "type2"], ["op3", "type3"], ["op4", "type4"]]
-    ]
-
     const questionsAndAnswers = [
         {
+            image: "https://o.aolcdn.com/images/dims?quality=85&image_uri=http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F6623d5a6ae583f81ee3515b6b3615c7f%2F204855766%2Flandscape-1456483171-pokemon2.jpg&client=amp-blogside-v2&signature=a66341cc83efebc3c63cadf0db972d9a16e1b05d",
             question: '(0) Which character trait best describes your opponent?',
             type: "type",
             answers: [["Stubborn and Hot-Headed", "water"], ["Calm and Quiet", "electric"], ["Arrogant and Selfish", "psychic"], ["Friendly and Attention-Seeking", "ground"], ],
         },
         {
+            image: "https://i.ya-webdesign.com/images/pokemon-clip-small-16.png",
             question: '(1) Question 1',
             type: "type",
-            answers: [["Stubborn and Hot-Headed", "water"], ["Calm and Quiet", "electric"], ["Arrogant and Selfish", "psychic"], ["Friendly and Attention-Seeking", "ground"], ],
+            answers: [["ans1", "type1"], ["ans2", "type2"], ["ans3", "type3"], ["ans4", "type4"], ],
         },
         {
+            image: "https://www.altoonalibrary.org/wp-content/uploads/2019/08/pokemon.jpg", 
             question: '(2) Question 2',
             type: "type",
-            answers: [["Stubborn and Hot-Headed", "water"], ["Calm and Quiet", "electric"], ["Arrogant and Selfish", "psychic"], ["Friendly and Attention-Seeking", "ground"], ],
+            answers: [["ans1", "type1"], ["ans2", "type2"], ["ans3", "type3"], ["ans4", "type4"], ],
         },
     ]
 
-    var images = [
-        "https://o.aolcdn.com/images/dims?quality=85&image_uri=http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F6623d5a6ae583f81ee3515b6b3615c7f%2F204855766%2Flandscape-1456483171-pokemon2.jpg&client=amp-blogside-v2&signature=a66341cc83efebc3c63cadf0db972d9a16e1b05d",
-        "https://i.ya-webdesign.com/images/pokemon-clip-small-16.png",
-        "https://www.altoonalibrary.org/wp-content/uploads/2019/08/pokemon.jpg"
-    ]
-
-    const numbers = [0, 1];
-
-
     return (
-        questionsAndAnswers.map(questionAndAnswer => (
-            <div key={questionAndAnswer.question}>
-                <div>{questionAndAnswer.question}</div>
-                <ul>
-                    {questionAndAnswer.answers.map(answer => (
-                        <li key={answer[0]}>
-                            {answer[0]}: {answer[1]}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        ))
-        //repeat this 2 times 
-        //use .map somehow ... 
-        // {numbers.map(z) => {
-            /*
-            <Container maxWidth="lg" style={{marginTop: 20}}>
+
+        questionsAndAnswers.map(questionAndAnswer => (    
+            <Container maxWidth="lg" style={{marginTop: 20}}>      
             <Paper style={{padding: 10, backgroundColor: '#fffff3'}}>
-                // <img src= {images[z]} alt="new"/>
-                <img src= {images[0]} alt="new"/>
-                <Typography variant="h3" align="center"> 
-                    {questions[z]}
-                    {questions[0]}
-                    {answers[z].slice(1).map(([x, y]) => <button>{x}</button>)}
-                    {answers[0].slice(1).map(([x, y]) => <button>{x}</button>)}  
-            </Typography> 
+            <Typography variant="h3" align="center">   
+
+            <div key={questionAndAnswer.question}>
+                <img src= {questionAndAnswer.image} alt="new"/>
+                <div>{questionAndAnswer.question}</div>
+                <div>
+                    {questionAndAnswer.answers.map(answer => (
+                        <div key={answer[0]}>
+                            {/* {answer[0]}: {answer[1]} */}
+                            <button>{answer[0]}</button>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            </Typography>
             </Paper>
             </Container>
-            */ 
-        // }}  
-
-        
+        ))
     )        
 
 }
