@@ -4,7 +4,10 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 
-export default function Results() {
+export default function Questions(props) {
+    const updateInfo = (param) => {
+      props.setPokeInfo([...props.pokeInfo, param])
+    }
 
     const questionsAndAnswers = [
         {
@@ -41,7 +44,7 @@ export default function Results() {
                     {questionAndAnswer.answers.map(answer => (
                         <div key={answer[0]}>
                             {/* {answer[0]}: {answer[1]} */}
-                            <button>{answer[0]}</button>
+                            <button onClick={() => updateInfo(answer[1])}>{answer[0]}</button>
                         </div>
                     ))}
                 </div>

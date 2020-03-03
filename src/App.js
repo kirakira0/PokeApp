@@ -6,11 +6,12 @@ import Questions from "./Questions";
 
 
 export default function App() {
+  const [pokeInfo, setPokeInfo] = useState([]) // initializes to empty array
 
   return (
     <div className="App">
       <Header />
-      <Questions />
+      <Questions pokeInfo={pokeInfo} setPokeInfo={setPokeInfo} />
       <Results />
       <Map />
     </div>
