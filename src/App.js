@@ -7,11 +7,12 @@ import "./FrontPage.css";
 
 
 export default function App() {
+  const [pokeInfo, setPokeInfo] = useState([]) // initializes to empty array
 
   return (
     <div className="App" id="App">
       <Header />
-      <Questions />
+      <Questions pokeInfo={pokeInfo} setPokeInfo={setPokeInfo} />
       <Results />
       <Map />
     </div>
