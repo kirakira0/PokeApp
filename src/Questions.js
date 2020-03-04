@@ -58,9 +58,8 @@ export default function Questions(props) {
                 <div id="question-answer-container">
                     {questionAndAnswer.answers.map(answer => (
                         <div key={answer[0]}>
-                            {/* {answer[0]}: {answer[1]} */}
-                            <button class="button" onClick={() => updateInfo(answer[1])}>{answer[0]}</button>
-                            {/* <button class="button" onClick={() => setPokeType(answer[1])}>{answer[0]}</button> */}
+                            {<button class="button">{answer[0]}</button>}
+                            {/* <button class="button" onClick={() => updateInfo(answer[1])}>{answer[0]}</button> */}
 
                         </div>
                     ))}
