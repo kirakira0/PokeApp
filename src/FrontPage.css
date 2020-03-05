@@ -17,9 +17,14 @@
         box-shadow: 5px 5px;
     }
 
+    .button:active {
+        background-color: darkgray;
+    }
+
 body {
     background-image: url("https://images.nintendolife.com/0cb4cd2bf797b/galar.original.jpg");
     background-attachment: fixed;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +38,7 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     height: 10vh;
     margin-bottom: 5vh;
+    padding: 15px;
 }
    
 
@@ -54,6 +60,7 @@ body {
     width: 50vw;
     height: auto;
     padding: 20px;
+    border-radius: 20px;
 }
 
 #question-answer-container {
