@@ -1,10 +1,10 @@
 Authors: 
 
 Team Eleet Four: 
-Julian Gonzalez: jgonz156@lion.lmu.edu, Jgonz156
-Carter Pon: cpon@lion.lmu.edu, cpon00
-Salem Tesfu: stesfu@lion.lmu.edu, stesfu
-Kira Toal: ktoal1@lion.lmu.edu, kirakira0
+- Kira Toal: ktoal1@lion.lmu.edu, kirakira0
+- Salem Tesfu: stesfu@lion.lmu.edu, stesfu
+- Julian Gonzalez: jgonz156@lion.lmu.edu, Jgonz156
+- Carter Pon: cpon@lion.lmu.edu, cpon00
 
 What is PokeApp?
 
