@@ -22,11 +22,11 @@ export default function Results(props) {
     
     const pokeProperty = qualifiedPokemon.split("/")[qualifiedPokemon.split("/").length - 2]; 
  
-    if (pokeProperty == "type") {
+    if (pokeProperty === "type") {
       return (
           <Container maxWidth="lg" style={{marginTop: 20}}>
           <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
-              <p>The Pokémon best suited to fight your enemy is/are:</p>
+              <p>The Pokémon best suited to fight your enemy are:</p>
               <div>
                 {/* {qualifiedPokemon} */}
               {typeInfo.pokemon &&
@@ -45,11 +45,11 @@ export default function Results(props) {
       )    
     }
 
-    if (pokeProperty == "growth-rate") {
+    if (pokeProperty === "growth-rate" || pokeProperty === "pokemon-habitat") {
       return (
           <Container maxWidth="lg" style={{marginTop: 20}}>
           <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
-              <p>The Pokémon best suited to fight your enemy is/are:</p>
+              <p>The Pokémon best suited to fight your enemy are:</p>
               <div>
               {typeInfo.pokemon_species &&
                 typeInfo.pokemon_species.map(result => (
@@ -67,24 +67,14 @@ export default function Results(props) {
       )    
     }
 
-    return (
-    <Container maxWidth="lg" style={{marginTop: 20}}>
-      <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
-          <p>The Pokémon best suited to fight your enemy is/are:</p>
-          <div>
-            {/* {qualifiedPokemon} */}
-          {typeInfo.pokemon &&
-            typeInfo.pokemon.map(result => (
-            <p>
-              <li key={result.name}>
-                <a href={result.pokemon.url}>
-                    {result.pokemon.name}
-                </a>
-              </li>
-            </p>)
-            )}
-          </div>
-      </Paper>
-    </Container>
-    )
+    else {
+      return (
+        <Container maxWidth="lg" style={{marginTop: 20}}>
+        <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
+            <p>Loading results ...</p>
+        </Paper>
+      </Container> 
+    )    
+    }
+
 }

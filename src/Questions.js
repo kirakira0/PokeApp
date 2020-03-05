@@ -18,6 +18,19 @@ export default function Questions() {
                 ["Arrogant and Selfish", "https://pokeapi.co/api/v2/type/psychic"], 
                 ["Friendly and Attention-Seeking", "https://pokeapi.co/api/v2/type/ground"], ],
         },
+
+        {
+            image: "https://pbs.twimg.com/media/CpXa0q4XEAAMRTa.jpg", 
+            question: 'How does your enemy address real life problems?',
+            baseURL: "https://pokeapi.co/api/v2/nature/",
+            answers: [["Carefully", "hasty"], ["Boldly", "mild"], ["They ask others for help", "lonely"], ["They don't", "type4"], ],
+        },
+        {
+            image: "https://ksassets.timeincuk.net/wp/uploads/sites/54/2019/07/pokemon-masters-brings-3-on-3-trainer-battles-to-mobile-this-summer.jpg", 
+            question: 'How does your enemy perform at work/school?',
+            baseURL: "https://pokeapi.co/api/v2/characteristic/",
+            answers: [["They doze off", "type1"], ["They are focused and methodical", "type2"], ["They don't show up", "type3"], ["They are very efficient", "type4"], ],
+        },
         {
             image: "https://i.pinimg.com/originals/aa/9b/ae/aa9bae122db73f0de4ebc8a2a61319fa.jpg ",
             question: 'How old is your enemy?',
@@ -27,12 +40,6 @@ export default function Questions() {
                 ["20-64", "https://pokeapi.co/api/v2/growth-rate/slow"], 
                 ["65+", "https://pokeapi.co/api/v2/growth-rate/slow"], ],
         },
-        // {
-        //     image: "https://pbs.twimg.com/media/CpXa0q4XEAAMRTa.jpg", 
-        //     question: 'How does your enemy address real life problems?',
-        //     baseURL: "https://pokeapi.co/api/v2/nature/",
-        //     answers: [["Carefully", "hasty"], ["Boldly", "mild"], ["They ask others for help", "lonely"], ["They don't", "type4"], ],
-        // },
         {
             image: "https://cdna.artstation.com/p/assets/images/images/005/519/152/large/dezra-tayler-3-balls.jpg?1491629359", 
             question: 'Where is your enemy from?',
@@ -42,18 +49,6 @@ export default function Questions() {
                 ["Countryside ", "https://pokeapi.co/api/v2/pokemon-habitat/urban"], 
                 ["Hell, probably", "https://pokeapi.co/api/v2/pokemon-habitat/waters-edge"], ],
         },
-        // {
-        //     image: "https://i.kym-cdn.com/photos/images/newsfeed/000/938/464/a51.jpg ", 
-        //     question: 'How does your enemy perform at work/school?',
-        //     baseURL: "https://pokeapi.co/api/v2/characteristic/",
-        //     answers: [["They doze off", "type1"], ["ans2", "type2"], ["ans3", "type3"], ["ans4", "type4"], ],
-        // },
-        // {
-        //     image: "https://www.cartoonbucket.com/wp-content/uploads/2015/05/Pikachu-Eating-Candy.jpg ", 
-        //     question: 'What candy most reminds you of your enemy?',
-        //     baseURL: "type",
-        //     answers: [["ans1", "type1"], ["ans2", "type2"], ["ans3", "type3"], ["ans4", "type4"], ],
-        // },
        
     ]
 
