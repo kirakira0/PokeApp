@@ -7,13 +7,12 @@ import "./FrontPage.css";
 
 
 export default function App() {
-  //Qualified Pokemon setter, initialised to an empty array
 
   return (
     <div className="App" id="App">
       <Header />
       <Questions/>
-      {/* <Results/> */}
+      {/* Results rendered in Questions */}
       <Map />
     </div>
   );

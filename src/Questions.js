@@ -4,34 +4,27 @@ import "./FrontPage.css";
 import Results from "./Results";
 
 export default function Questions() {
-    const [qualifiedPokemon, setQualifiedPokemon] = useState([])
-
-    const [pokeInfo, setPokeInfo] = useState([]) // initializes to empty array
-    const [pokeType, setPokeType] = useState()
-  
-    // const pokeInfo = props.pokeInfo;
-    // const setPokeInfo = props.setPokeInfo;
-    // const qualifiedPokemon = props.qualifiedPokemon;
-    // const setQualifiedPokemon = props.setQualifiedPokemon;
-    // const updateInfo = (param) => {
-    //   props.setPokeInfo([...props.pokeInfo, param])
-    //   props.setPokeType([...props.pokeType, param])
-    //   props.setQualifiedPokemon([...props.qualifiedPokemon, param])
-    //   console.log(props.qualifiedPokemon); 
-    // }
+    
+    const [qualifiedPokemon, setQualifiedPokemon] = useState("")
 
     const questionsAndAnswers = [
         {
             image: "https://o.aolcdn.com/images/dims?quality=85&image_uri=http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F6623d5a6ae583f81ee3515b6b3615c7f%2F204855766%2Flandscape-1456483171-pokemon2.jpg&client=amp-blogside-v2&signature=a66341cc83efebc3c63cadf0db972d9a16e1b05d",
             question: 'What is your enemy’s defining quality?',
             baseURL: "https://pokeapi.co/api/v2/type/",
-            answers: [["Stubborn and Hot-Headed", "https://pokeapi.co/api/v2/type/water"], ["Calm and Quiet", "electric"], ["Arrogant and Selfish", "psychic"], ["Friendly and Attention-Seeking", "ground"], ],
+            answers: [["Stubborn and Hot-Headed", "https://pokeapi.co/api/v2/type/water"], 
+                ["Calm and Quiet", "https://pokeapi.co/api/v2/type/electric"], 
+                ["Arrogant and Selfish", "https://pokeapi.co/api/v2/type/psychic"], 
+                ["Friendly and Attention-Seeking", "https://pokeapi.co/api/v2/type/ground"], ],
         },
         {
             image: "https://i.pinimg.com/originals/aa/9b/ae/aa9bae122db73f0de4ebc8a2a61319fa.jpg ",
             question: 'How old is your enemy?',
             baseURL: "https://pokeapi.co/api/v2/growth-rate/",
-            answers: [["0-12", "fast"], ["13-19", "medium"], ["20-64", "slow"], ["65+", "slow"], ],
+            answers: [["0-12", "https://pokeapi.co/api/v2/growth-rate/fast"], 
+                ["13-19", "https://pokeapi.co/api/v2/growth-rate/medium"], 
+                ["20-64", "https://pokeapi.co/api/v2/growth-rate/slow"], 
+                ["65+", "https://pokeapi.co/api/v2/growth-rate/slow"], ],
         },
         // {
         //     image: "https://pbs.twimg.com/media/CpXa0q4XEAAMRTa.jpg", 
@@ -43,7 +36,10 @@ export default function Questions() {
             image: "https://cdna.artstation.com/p/assets/images/images/005/519/152/large/dezra-tayler-3-balls.jpg?1491629359", 
             question: 'Where is your enemy from?',
             baseURL: "https://pokeapi.co/api/v2/pokemon-habitat/",
-            answers: [["Suburbs", "rough-terrain"], ["City", "cave"], ["Countryside ", "urban"], ["Hell, probably", "waters-edge"], ],
+            answers: [["Suburbs", "https://pokeapi.co/api/v2/pokemon-habitat/rough-terrain"], 
+                ["City", "https://pokeapi.co/api/v2/pokemon-habitat/cave"], 
+                ["Countryside ", "https://pokeapi.co/api/v2/pokemon-habitat/urban"], 
+                ["Hell, probably", "https://pokeapi.co/api/v2/pokemon-habitat/waters-edge"], ],
         },
         // {
         //     image: "https://i.kym-cdn.com/photos/images/newsfeed/000/938/464/a51.jpg ", 
@@ -70,8 +66,6 @@ export default function Questions() {
                         {questionAndAnswer.answers.map(answer => (
                             <div key={answer[0]}>
                                 {<button class="button" onClick={() => setQualifiedPokemon(answer[1])}>{answer[0]}</button>}
-                                {/* <button class="button" onClick={() => updateInfo(answer[1])}>{answer[0]}</button> */}
-
                             </div>
                         ))}
                     </div>
