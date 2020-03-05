@@ -11,20 +11,22 @@ export default function Results(props) {
     
     const qualifiedPokemon = props.qualifiedPokemon;
     const [typeInfo, setPokeType] = useState([]) // initializes to empty array
-    console.log("Qualified pokemon is: " + qualifiedPokemon); 
-    //const url = qualifiedPokemon;
+
+    console.log("BEFORE USE EFFECT: " + qualifiedPokemon); 
+    // const url = qualifiedPokemon;    
     useEffect(() => {
-     const url = "https://pokeapi.co/api/v2/type/water";
-      // const url = qualifiedPokemon;
-      console.log("STRING URL IS: " + "https://pokeapi.co/api/v2/type/water")
-      console.log("Url from props is: " + qualifiedPokemon);
-      console.log("The strings are equalivalent: " + (qualifiedPokemon === "https://pokeapi.co/api/v2/type/water") )
+    //  const url = "https://pokeapi.co/api/v2/type/water";
+      const url = qualifiedPokemon;
+
+      console.log("IN USE EFFECT" + qualifiedPokemon); 
+
       fetch(url)
         .then(typeResults => typeResults.json())
         .then(p => setPokeType(p));
-    }, []);
-    console.log("Qualified type is: " + typeInfo); 
-    console.log("The strings are equalivalent: " + (qualifiedPokemon === "https://pokeapi.co/api/v2/type/water") )
+    }, [qualifiedPokemon]);
+    
+    console.log("AFTER USE EFFECT: " + qualifiedPokemon); 
+    // console.log("The strings are equalivalent: " + (qualifiedPokemon === "https://pokeapi.co/api/v2/type/water") )
 
 
     return (
