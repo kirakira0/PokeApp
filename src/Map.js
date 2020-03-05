@@ -6,9 +6,35 @@ export default function Map({ options, onMount, className, onMountProps }) {
   const ref = useRef();
   const [map, setMap] = useState();
 
+  const links = {
+    coords: {lat: 33.9676675, lng: -118.4177108},
+    title: `Sullivan Field`,
+  }
+
+  function addMarkers(map, links) {
+    links.forEach((link, index) => {
+      const marker = new window.google.maps.Marker({
+        map,
+        position: link.coords,
+        label: `${index + 1}`,
+        title: link.title,
+      })
+      marker.addListener(`click`, () => {
+        window.location.href = link.url
+      })
+    })
+  }
+
+  const mapProps = {
+    options: { center: { lat: 33.97, lng: -118.42 }, zoom: 13 },
+    onMount: addMarkers, 
+    onMountProps: links, 
+  }
+
+  
   useEffect(() => {
     const onLoad = () =>
-      setMap(new window.google.maps.Map(ref.current, options));
+      setMap(new window.google.maps.Map(ref.current, mapProps.options));
     if (!window.google) {
       const script = document.createElement(`script`);
       script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLEAPIKEY}`;
@@ -27,10 +53,3 @@ export default function Map({ options, onMount, className, onMountProps }) {
     />
   );
 }
-
-Map.defaultProps = {
-  options: {
-    center: { lat: 33.97, lng: -118.42 },
-    zoom: 13
-  }
-};

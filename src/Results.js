@@ -61,6 +61,7 @@ export default function Results(props) {
                   </li>
                 </p>)
                 )}
+                <p>Here are suitable locations for battle!</p>
               </div>
           </Paper>
         </Container> 
