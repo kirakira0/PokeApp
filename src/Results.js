@@ -20,8 +20,9 @@ export default function Results(props) {
         .then(p => setPokeType(p));
     }, [qualifiedPokemon]);
     
+    const pokeProperty = qualifiedPokemon.split("/")[qualifiedPokemon.split("/").length - 2]; 
  
-    if (qualifiedPokemon.split("/")[qualifiedPokemon.split("/").length - 2] == "type") {
+    if (pokeProperty == "type") {
       return (
           <Container maxWidth="lg" style={{marginTop: 20}}>
           <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
@@ -34,6 +35,28 @@ export default function Results(props) {
                   <li key={result.name}>
                     <a href={result.pokemon.url}>
                         {result.pokemon.name}
+                    </a>
+                  </li>
+                </p>)
+                )}
+              </div>
+          </Paper>
+        </Container> 
+      )    
+    }
+
+    if (pokeProperty == "growth-rate") {
+      return (
+          <Container maxWidth="lg" style={{marginTop: 20}}>
+          <Paper style={{padding: 20, backgroundColor: '#fffff3'}}>
+              <p>The Pokémon best suited to fight your enemy is/are:</p>
+              <div>
+              {typeInfo.pokemon_species &&
+                typeInfo.pokemon_species.map(result => (
+                <p>
+                  <li key={result.name}>
+                    <a href={result.url}>
+                        {result.name}
                     </a>
                   </li>
                 </p>)
