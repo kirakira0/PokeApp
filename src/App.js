@@ -7,15 +7,13 @@ import "./FrontPage.css";
 
 
 export default function App() {
-  const [pokeInfo, setPokeInfo] = useState([]) // initializes to empty array
-  const [qualifiedPokemon, setQualifiedPokemon] = useState([])
-  const [pokeType, setPokeType] = useState()
+  //Qualified Pokemon setter, initialised to an empty array
 
   return (
     <div className="App" id="App">
       <Header />
-      <Questions pokeInfo={pokeInfo} setPokeInfo={setPokeInfo} />
-      <Results typeInfo={pokeType} setPokeType={setPokeType}/>
+      <Questions/>
+      {/* <Results/> */}
       <Map />
     </div>
   );
