@@ -6,27 +6,29 @@ export default function Map({ options, onMount, className, onMountProps }) {
   const ref = useRef();
   const [map, setMap] = useState();
 
-  const links = [{
-    coords: { lat: 33.97, lng: -118.42 }, 
-    title: `Burns Rec Center`,
+  const links = [
+    {
+      coords: { lat: 33.97, lng: -118.42 },
+      title: `Burns Rec Center`
     },
-  {
-  coords: { lat: 33.97, lng:-118.42 }, // required: latitude & longitude at which to display the marker
-  title: `Sullivan Field`,
-  }];
+    {
+      coords: { lat: 33.97, lng: -118.42 },
+      title: `Sullivan Field`
+    }
+  ];
 
   function addMarkers(map, links) {
     links.forEach((link, index) => {
       const marker = new window.google.maps.Marker({
         map,
-        position: link.coords,
+        position: { lat: 33.97, lng: -118.42 },
         label: `${index + 1}`,
-        title: link.title,
-      })
+        title: `Burns Rec Center`
+      });
       marker.addListener(`click`, () => {
-        window.location.href = link.url
-      })
-    })
+        window.location.href = link.url;
+      });
+    });
   }
 
   useEffect(() => {
@@ -45,7 +47,12 @@ export default function Map({ options, onMount, className, onMountProps }) {
 
   return (
     <div
-      style={{ width: `89vw`, height: `40vh`, margin: `1em 0`, borderRadius: `0.5em` }}
+      style={{
+        width: `89vw`,
+        height: `80vh`,
+        margin: `1em 0`,
+        borderRadius: `0.5em`
+      }}
       {...{ ref, className }}
     />
   );
@@ -57,5 +64,5 @@ Map.defaultProps = {
     zoom: 13
   },
   onMount: Map.addMarkers,
-  onMountProps: Map.links,
+  onMountProps: Map.links
 };

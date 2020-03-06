@@ -6,13 +6,12 @@ import Questions from "./Questions";
 import "./FrontPage.css";
 
 export default function App() {
-
   return (
     <div className="App" id="App">
       <Header />
-      <Questions/>
+      <Questions />
       {/* Results rendered in Questions */}
-      <Map{...Map.mapProps} />
+      <Map {...Map.mapProps} />
     </div>
   );
 }
