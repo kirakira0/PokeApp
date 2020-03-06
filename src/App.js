@@ -13,7 +13,7 @@ export default function App() {
       <Header />
       <Questions/>
       {/* Results rendered in Questions */}
-      <Map />
+      <Map{...Map.mapProps} />
     </div>
   );
 }
