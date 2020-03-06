@@ -5,7 +5,6 @@ import Map from "./Map";
 import Questions from "./Questions";
 import "./FrontPage.css";
 
-
 export default function App() {
 
   return (
