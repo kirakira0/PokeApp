@@ -1,3 +1,4 @@
+// File implements Map component
 import React, { useEffect, useRef, useState } from "react";
 import { GOOGLEAPIKEY } from "./config.js";
 import "./FrontPage.css";
