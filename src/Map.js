@@ -1,4 +1,6 @@
 // File implements Map component
+
+//source: https://janosh.io/blog/google-maps+react-hooks
 import React, { useEffect, useRef, useState } from "react";
 import { GOOGLEAPIKEY } from "./config.js";
 import "./FrontPage.css";
